@@ -1,0 +1,30 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="drop-dark">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.2" flood-color="#000000"/>
+    </filter>
+  </defs>
+  
+  <!-- Rounded square background -->
+  <rect x="5" y="5" width="22" height="22" rx="6" fill="url(#grad-dark)" filter="url(#drop-dark)"/>
+  
+  <!-- Top-left inner highlight -->
+  <rect x="5" y="5" width="22" height="22" rx="6" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  
+  <!-- Corner bracket box - inset 5px, size 12x12, rotated 45 to create roof peak -->
+  <!-- The border element is positioned at (10, 10) which is 5px inset from (5,5) to (27,27) -->
+  <g transform="translate(16 16) rotate(45)">
+    <!-- Draw a rect with only top and left borders visible -->
+    <!-- Using path to draw just top and left edges -->
+    <path d="M -6 -6 L 6 -6 M -6 -6 L -6 6" 
+          stroke="rgba(15,17,21,1)" 
+          stroke-width="1.5" 
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"/>
+  </g>
+</svg>
